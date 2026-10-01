@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#210E16">
+  <title>Una casa sobre ruedas | YV Español</title>
+  <meta name="description" content="Aula interativa de espanhol sobre as partes da casa, diferenças regionais e hay, está e están.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="YV Español — inicio"><img src="assets/logobranca.png" alt="YV Español"></a>
+    <nav aria-label="Navegación de la clase"><a href="#conversacion">Conversación</a><a href="#vocabulario">Vocabulario</a><a href="#video">Vídeo</a><a href="#gramatica">Gramática</a></nav>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">YV ESPAÑOL · LANGUAGE CLUB</span>
+        <h1>Una casa<br><em>sobre ruedas</em></h1>
+        <p>Explora las partes de la casa, compara el español de España y América Latina y aprende a presentar y localizar objetos.</p>
+        <a class="primary-btn" href="#conversacion">Empezar la clase <span>↓</span></a>
+      </div>
+      <div class="hero-card" aria-hidden="true"><span>🇪🇸</span><strong>HAY</strong><p>una casa entera<br>dentro de una furgoneta.</p></div>
+    </section>
+
+    <form id="lesson-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="1027624e-f586-43ab-bb7e-22c0f93222a0">
+      <input type="hidden" name="subject" value="YV Español — Una casa sobre ruedas">
+      <input type="hidden" name="from_name" value="YV Español">
+
+      <section class="student-strip">
+        <label>Nombre<input name="nombre" type="text" autocomplete="name" required placeholder="Escribe tu nombre"></label>
+        <label>Fecha<input name="fecha" id="lesson-date" type="date" required></label>
+      </section>
+
+      <section class="section" id="conversacion">
+        <div class="section-title"><span>01 · ANTES DEL VÍDEO</span><h2>Hablemos de viajar y vivir</h2><p>Responde oralmente con frases completas.</p></div>
+        <ol class="conversation-grid">
+          <li>¿Te gusta viajar?</li><li>¿Has viajado alguna vez en una furgoneta?</li><li>¿Podrías vivir en una casa pequeña?</li><li>¿Qué necesita una casa para ser cómoda?</li>
+        </ol>
+      </section>
+
+      <section class="section cream-panel" id="vocabulario">
+        <div class="section-title dark-title"><span>02 · VOCABULARIO</span><h2>Las partes de la casa</h2><p>Compara las variantes y escucha la pronunciación priorizando el español de España.</p></div>
+        <div class="region-key"><span class="spain">🇪🇸 España</span><span class="latam">🌎 América Latina</span></div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Português</th><th>España</th><th>América Latina</th><th>Audio</th></tr></thead>
+            <tbody id="rooms-table"></tbody>
+          </table>
+        </div>
+        <p class="regional-note"><strong>Importante:</strong> El español de América Latina no es homogéneo. Las palabras pueden cambiar de un país a otro.</p>
+
+        <div class="differences">
+          <article><strong>piso</strong><p>En España, es muy común para “apartamento”. En América Latina se usan más <em>apartamento</em> o <em>departamento</em>.</p><blockquote>Vivo en un piso pequeño en Madrid.</blockquote></article>
+          <article><strong>salón × sala</strong><p>En España, se prefiere <em>salón</em>. En muchos países latinoamericanos, se utiliza <em>sala</em>.</p><blockquote>El sofá está en el salón.</blockquote></article>
+          <article><strong>dormitorio</strong><p>En España se usan <em>dormitorio</em> y <em>habitación</em>. En América Latina también aparecen <em>cuarto</em> y <em>recámara</em>.</p></article>
+          <article><strong>despacho</strong><p>Es habitual en España para el escritório doméstico. En América Latina se escuchan <em>estudio</em> y <em>oficina</em>.</p></article>
+        </div>
+      </section>
+
+      <section class="section visual-guide">
+        <div class="section-title"><span>03 · GUÍA VISUAL</span><h2>Una casa, habitación por habitación</h2><p>Pulsa la imagen para verla en tamaño completo.</p></div>
+        <button class="poster-button" type="button" id="open-poster" aria-label="Abrir guía visual en tamaño completo"><img src="assets/habitaciones-de-una-casa-yv-espanol.png" alt="Guía visual de las habitaciones de una casa en español"></button>
+      </section>
+
+      <section class="section mini-vocab">
+        <div class="section-title"><span>04 · VOCABULARIO DEL VÍDEO</span><h2>Antes de entrar en la furgoneta</h2></div>
+        <div class="word-grid" id="video-vocab"></div>
+        <aside class="variant-box"><h3>España y América Latina</h3><p>En España se utiliza principalmente <strong>furgoneta</strong>. En América Latina podemos encontrar <strong>camioneta</strong>, <strong>van</strong>, <strong>furgón</strong> o <strong>combi</strong>, según el país. El significado de <em>camioneta</em> también varía: puede ser una van o una caminhonete.</p></aside>
+      </section>
+
+      <section class="section" id="video">
+        <div class="section-title"><span>05 · COMPRENSIÓN AUDIOVISUAL</span><h2>Una casa dentro de una furgoneta</h2></div>
+        <div class="video-frame"><iframe src="https://www.youtube.com/embed/hydpIx1EMJA" title="This Van Is My House Now (And I Built It Myself)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        <div class="watch-list"><h3>Mientras ves el vídeo, presta atención a:</h3><ul><li>las partes de la furgoneta;</li><li>los muebles;</li><li>los objetos que utiliza;</li><li>la organización del espacio;</li><li>las semejanzas con una casa tradicional.</li></ul></div>
+        <div class="activity-card">
+          <h3>Después del vídeo</h3>
+          <div class="answer-grid">
+            <label>1. ¿Qué partes de una casa hay dentro de la furgoneta?<textarea name="video_1" rows="3"></textarea></label>
+            <label>2. ¿Qué muebles puedes identificar?<textarea name="video_2" rows="3"></textarea></label>
+            <label>3. ¿Cómo está organizado el espacio?<textarea name="video_3" rows="3"></textarea></label>
+            <label>4. ¿La furgoneta parece cómoda? ¿Por qué?<textarea name="video_4" rows="3"></textarea></label>
+            <label>5. ¿Qué parte de la furgoneta te ha gustado más?<textarea name="video_5" rows="3"></textarea></label>
+            <label>6. ¿Hay algún objeto que te haya sorprendido?<textarea name="video_6" rows="3"></textarea></label>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dream-panel">
+        <div class="section-title dark-title"><span>06 · CONVERSACIÓN</span><h2>Mi casa ideal sobre ruedas</h2><p>Imagina que vas a vivir y viajar en una furgoneta.</p></div>
+        <ol class="dream-questions"><li>¿Vivirías en una furgoneta? ¿Por qué?</li><li>¿Qué objetos pondrías dentro?</li><li>¿Cómo sería tu rutina viviendo allí?</li><li>¿Qué sería lo más difícil de vivir en un espacio pequeño?</li></ol>
+      </section>
+
+      <section class="section" id="gramatica">
+        <div class="section-title"><span>07 · GRAMÁTICA EN CONTEXTO</span><h2>HAY × ESTÁ / ESTÁN</h2><p>Presenta lo que existe y después explica dónde se encuentra.</p></div>
+        <div class="grammar-grid">
+          <article><span>PRESENTAR</span><h3>HAY</h3><p>Usamos <strong>hay</strong> para decir que algo existe o está presente en un lugar.</p><blockquote>En la furgoneta <b>hay</b> una cama.<br><b>Hay</b> varios armarios.<br>No <b>hay</b> mucho espacio.</blockquote><small><strong>Hay</strong> no cambia en plural: hay una cama / hay dos armarios.</small></article>
+          <article><span>LOCALIZAR</span><h3>ESTÁ / ESTÁN</h3><p>Usamos <strong>está</strong> o <strong>están</strong> para localizar algo que ya conocemos.</p><blockquote>La cama <b>está</b> al lado de la ventana.<br>Los cajones <b>están</b> debajo de la mesa.</blockquote></article>
+        </div>
+        <div class="comparison-table">
+          <div><strong>Hay una cama en la furgoneta.</strong><span>La cama está al lado de la ventana.</span></div>
+          <div><strong>Hay varios armarios.</strong><span>Los armarios están encima de la cama.</span></div>
+          <div><strong>Hay una cocina pequeña.</strong><span>La cocina está cerca de la puerta.</span></div>
+        </div>
+
+        <div class="exercise-card">
+          <h3>Completa con hay, está o están</h3>
+          <div class="fill-grid">
+            <label>1. En la furgoneta <input name="fixacao_1" data-answer="hay" autocomplete="off"> una cama.</label>
+            <label>2. La cama <input name="fixacao_2" data-answer="está" autocomplete="off"> al lado de la ventana.</label>
+            <label>3. También <input name="fixacao_3" data-answer="hay" autocomplete="off"> varios armarios.</label>
+            <label>4. Los armarios <input name="fixacao_4" data-answer="están" autocomplete="off"> encima de la cama.</label>
+            <label>5. No <input name="fixacao_5" data-answer="hay" autocomplete="off"> mucho espacio.</label>
+            <label>6. La cocina <input name="fixacao_6" data-answer="está" autocomplete="off"> cerca de la puerta.</label>
+          </div>
+          <button class="check-btn" type="button" id="check-answers">Comprobar respuestas</button>
+          <p id="score" class="score" aria-live="polite"></p>
+        </div>
+        <button class="submit-btn" type="submit">Enviar mi actividad <span>→</span></button>
+        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+      </section>
+    </form>
+  </main>
+
+  <dialog id="poster-dialog"><button type="button" id="close-poster" aria-label="Cerrar">×</button><img src="assets/habitaciones-de-una-casa-yv-espanol.png" alt="Guía visual de las habitaciones de una casa en español"></dialog>
+  <footer><img src="assets/logobranca.png" alt="YV Español"><p>From understanding to speaking.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
